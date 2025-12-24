@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Deepfake Detection</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, #020617, #020617);
+        color: #e5e7eb;
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #38bdf8;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        background: #020617;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 0 30px rgba(56,189,248,0.2);
+    }
+
+    button {
+        background: linear-gradient(90deg, #38bdf8, #6366f1);
+        border: none;
+        padding: 12px 28px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .fake { color: #ef4444; }
+    .real { color: #22c55e; }
+    .uncertain { color: #facc15; }
+
+    img {
+        width: 100%;
+        max-width: 350px;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h1>AI Deepfake Detection</h1>
+
+    <div class="card">
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*,video/*" required>
+            <br><br>
+            <button type="submit">Analyze</button>
+        </form>
+
+        {% if prediction %}
+            <h2 class="
+                {% if prediction=='FAKE' %}fake
+                {% elif prediction=='REAL' %}real
+                {% else %}uncertain{% endif %}">
+                Prediction: {{ prediction }}
+            </h2>
+
+            <p>Confidence: {{ confidence }}%</p>
+
+            {% if original_img %}
+                <h3>Original Image</h3>
+                <img src="{{ original_img }}">
+                <h3>Grad-CAM Explanation</h3>
+                <img src="{{ result_img }}">
+            {% endif %}
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+# Datasets
+raw_data/
+dataset/
+
+# Model files
+models/
+*.pth
+
+# Videos
+*.mp4
+*.avi
+*.mov
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
