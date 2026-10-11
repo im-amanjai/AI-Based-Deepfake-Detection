@@ -11,7 +11,6 @@ Built using **EfficientNet-B0, PyTorch, OpenCV, and Gradio**, this project provi
   <img src="https://img.shields.io/badge/Interface-Gradio-orange?logo=gradio&logoColor=white" alt="Gradio" />
   <img src="https://img.shields.io/badge/Computer%20Vision-OpenCV-blue?logo=opencv&logoColor=white" alt="OpenCV" />
 </p>
----
 
 ## 📖 Overview
 
