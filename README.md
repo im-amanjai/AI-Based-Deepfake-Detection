@@ -11,24 +11,6 @@ Built using **EfficientNet-B0, PyTorch, OpenCV, and Gradio**, this project provi
   <img src="https://img.shields.io/badge/Interface-Gradio-orange?logo=gradio&logoColor=white" alt="Gradio" />
   <img src="https://img.shields.io/badge/Computer%20Vision-OpenCV-blue?logo=opencv&logoColor=white" alt="OpenCV" />
 </p>
-
----
-
-## 📌 Table of Contents
-
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [How It Works](#-how-it-works)
-- [Model Architecture](#-model-architecture)
-- [Technology Stack](#-technology-stack)
-- [Project Screenshots](#-project-screenshots)
-- [Getting Started](#-getting-started)
-- [Running the Application](#-running-the-application)
-- [Deployment](#-deployment)
-- [Limitations](#-limitations)
-- [Future Enhancements](#-future-enhancements)
-- [Contributors](#-contributors)
-
 ---
 
 ## 📖 Overview
